@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IAPTCPR</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!--Icon on title bar-->
+    <link rel='Shortcut Icon' type='image/x-icon' href='assets/images/logo.png'>
+
+    <style type="text/css">
+        html {
+            overflow: auto;
+        }
+        
+        html,
+        body,
+        div,
+        iframe {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            border: none;
+        }
+        
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <iframe id="gfgFrame" src="" style="height: 100%; width: 100%; border:none;"></iframe>
+    <script src="assets/js/swal.js"></script>
+    <script type="text/javascript">
+        window.onload = function onStartup() //------------------------------------------------------>>executed when page is loaded
+            {
+                var mail=localStorage.getItem('mail');
+                console.log(mail);
+                if(mail=="null")
+                document.getElementById("gfgFrame").src = "indexMain.html";
+                else if(mail=='admin@gmail.com')
+                document.getElementById("gfgFrame").src = "adminlogin.html";
+                else{
+                    
+                    //   document.getElementById("gfgFrame").src = "userlogin.html";
+                document.getElementById("gfgFrame").src = "indexMain.html";
+                }
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IAPTCPR | Register</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!--Icon on title bar-->
+    <link rel='Shortcut Icon' type='image/x-icon' href='assets/images/logo.png'>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <link href="assets/css/variables-green.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'MyFont1';
+            src: url('assets/vendor/13-roshi-font/13Roshi-vmJeE.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont2';
+            src: url('assets/vendor/a-note-font/ANote-rgeO9.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont3';
+            src: url('assets/vendor/AAbsoluteEmpire-EaXpg/AAbsoluteEmpire-EaXpg.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont4';
+            src: url('assets/vendor/austhatic-script-font/AusthaticScript-3z1lM.ttf') format('truetype');
+        }
+        
+        .custom-swal-container {
+            background-color: rgba(0, 128, 0, 0.23) !important;
+        }
+        
+        .swal2-popup {
+            border-radius: 50px !important;
+            border: 5px solid rgba(55, 0, 255, 0.355) !important;
+        }
+        
+        .swal2-confirm {
+            background-color: rgba(0, 128, 0, 0.611) !important;
+            color: white;
+            border-radius: 50px !important;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
+            border-radius: 10px;
+        }
+        
+        .progress-container {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 5px;
+            border-radius: 50px;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: #21ea6d;
+            width: 0%;
+            border-radius: 50px;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+
+.inputBox {
+    /* max-width: 400px; */
+    margin-bottom: 20px;
+}
+
+.inputBox input[type="text"],
+.inputBox input[type="email"],
+.inputBox input[type="tel"],
+.inputBox input[type="date"],
+.inputBox input[type="url"],
+.inputBox input[type="number"],
+.inputBox textarea,
+.inputBox select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.inputBox select {
+    appearance: none;
+}
+
+.inputBox textarea {
+    resize: vertical;
+}
+
+.inputBox button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inputBox button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: none;
+}
+
+
+.hero{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+}
+
+.hero-banner{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-primary);
+}
+
+.content{
+    width: 50%;
+    height: 100%;
+}
+
+.banner-img{
+    width:35%;
+    /* heightttt%; */
+}
+
+
+.head-label{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--color-primary);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.head-label span {
+    width: 40%;
+    height: 4px;
+    background-color: var(--color-primary);
+    align-self: center;
+    margin-top: 18px;
+}
+
+.banner-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-img img {
+    width: 99%;
+    margin-left: 100px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-head {
+    text-align: left;
+    margin-left: 25%;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content-main {
+    text-align: left;
+    margin-left: 25%;
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content-desc {
+    text-align: left;
+    margin-left: 25%;
+    color: var(--color-text-dim);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.login-btn{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 18px;
+    width: 200px;
+    cursor: pointer;
+    padding: 14px 40px;
+    border-radius: 50px;
+    color: var(--color-text);
+    margin-top: 10px;
+    margin-left: 25%; 
+    justify-content: center;
+    align-items: center;
+    background: var(--color-button-background);
+    box-shadow: 0 0 15px var(--color-button-shadow);
+    border: 2px solid var(--color-button-border);
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header text-center" data-scrollto-offset="0">
+        <a href="indexMain.html#hero-animated" class="align-items-center scrollto me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/images/title.png" class="ml-5 mb-3" style="height:70%; width:70%;" alt="">
+        </a>
+        <div id="myHeader" class="container-fluid d-flex align-items-center justify-content-center" style="z-index: 1;">
+
+
+            <nav id="navbar" class="navbar">
+                <ul>
+
+                    <li><a class="nav-link scrollto" href="indexMain.html#hero-animated">Home</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#aboutsec">About Us</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#portfolio">Gallery</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#contact">Contact Us</a></li>
+                    <li><a class="nav-link scrollto active" href="register.html">Register</a></li>
+                    <li><a class="nav-link scrollto" href="login.html">Login</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle d-none"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+        <main id="main">
+            <br/><br/><br/>
+            <div class="container" style="border-radius: 20px; box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px; background-image: url('assets/images/bg.jpg');">
+                <br/><br/>
+                <h2 style="text-align: center;"><img src="assets/images/reg.png" alt="Registration Page" style="height: 50%; width: 50%;"></h2>
+                <br/><br/>
+                <form action="" id="contactForm">
+                  <div class="inputBox">                    
+                    <select name="sname" id="sname" style="border-radius: 20px; " required>
+                        <option value="" disabled selected>Salutation</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Miss">Miss</option>
+                        <option value="Sir">Sir</option>
+                        <option value="Dr">Dr</option>
+                      </select>
+                    <input type="text" id="fname" placeholder="First Name"  style="border-radius: 20px; " required />
+                    <input type="text" id="mname" placeholder="Middle Name"  style="border-radius: 20px; " required />
+                    <input type="text" id="lname" placeholder="Last Name"  style="border-radius: 20px; " />
+                  </div>
+                  <div class="inputBox">
+                    <input type="tel" id="phone" placeholder="Mobile Number"  style="border-radius: 20px; " required />
+                  </div>
+                  <div class="inputBox">
+                    <input type="email" id="email" placeholder="Email Adderss"  style="border-radius: 20px; " required />
+                  </div>
+                  <div class="inputBox">
+                    <textarea rows="5" id="address" placeholder="Adderss" style="border-radius: 20px; " required></textarea>
+                  </div>
+                  <div class="inputBox">
+                    <button style="background-color: rgb(29, 95, 29); border-radius: 20px;" type="submit">
+                      Register
+                    </button>
+                  </div>
+                </form>
+                <br/>
+              </div>
+              <br/><br/><br/>
+
+        </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-info">
+                            <h3>IAPTCPR Web</h3>
+                            <p>
+                                International Association of Plant Tissue Culturist and Phyto Researchers.<br>
+                                <strong>Phone:</strong> <br>
+                                <strong>Email:</strong> noreply.iaptcpr@gmail.com<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 footer-links"></div>
+                    <div class="col-lg-4 col-md-4 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li>
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#hero-animated">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#aboutsec">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#portfolio">Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#team">Team</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#contact">Contact Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="register.html">Register</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i><a href="login.html">Login</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-legal text-center">
+            <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+                <div class="d-flex flex-column align-items-center align-items-lg-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>IAPTCPR@2024
+                        </span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <b data-toggle="tooltip" data-placement="top" style="color:#21ea6d;"><b>Vidhey</b></b>
+                    </div>
+                </div>
+
+                <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                    <a target="_blank" href="" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a target="_blank" href="" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a target="_blank" href="mailto:" class="google-plus"><i class="bi bi-envelope-fill"></i></a>
+                    <a target="_blank" href="tel:" class="linkedin"><i class="bi bi-phone-fill"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" style="border-radius: 50px;" class="scroll-top d-flex align-items-center justify-content-center"><b><i class="bi bi-arrow-up-short"></i></b></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/swal.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        var header = document.getElementById("myHeader");
+        var header1 = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+
+            if (window.innerWidth > 1279) {
+                header1.classList.remove("fixed-top");
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    header.style.backgroundColor = "#ffffff";
+                    header.style.borderBottomLeftRadius = "20px";
+                    header.style.borderBottomRightRadius = "20px";
+                    header.style.boxShadow = "0px 5px 0px 0px rgba(0, 0, 0, 0.03)";
+                } else {
+                    header.classList.remove("sticky");
+                    header.style.backgroundColor = "transparent";
+                    header.style.borderBottomLeftRadius = "0px";
+                    header.style.borderBottomRightRadius = "0px";
+                    header.style.boxShadow = "0px 0px 0px 0px";
+                }
+            } else {
+                header1.classList.add("fixed-top");
+            }
+
+        }
+
+    firebaseConfig = {                
+        apiKey: "AIzaSyBDzbX51rYeLTt8CRMRPvRFMOU_T6WvWOY",
+        authDomain: "iaptcpr.firebaseapp.com",
+        projectId: "iaptcpr",
+        databaseURL: "https://iaptcpr-default-rtdb.firebaseio.com/",
+        storageBucket: "iaptcpr.appspot.com",
+        messagingSenderId: "1037008636841",
+        appId: "1:1037008636841:web:a6eaf40af60421a9d3d2b8",
+        measurementId: "G-2R6PF8XQ4W"
+    };
+    firebase.initializeApp(firebaseConfig);
+    document.title = "IAPTCPR | Register";
+    document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+
+function submitForm(e) {
+  e.preventDefault();
+
+  var sname = getElementVal("sname");
+  var fname = getElementVal("fname");
+  var mname = getElementVal("mname");
+  var lname = getElementVal("lname");
+  var phone = getElementVal("phone");
+  var email = getElementVal("email");
+  var address = getElementVal("address");
+  registerUser(sname,fname,mname,lname,phone,email,address);
+
+  document.getElementById("contactForm").reset();
+}
+
+// Function to register a user and check for duplicates using another unique value
+function registerUser(sname,fname,mname,lname,phone,email,address) {
+  // Check if the unique value already exists in the database
+  firebase.database().ref('users').orderByChild('email').equalTo(email).once('value')
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        swal({
+          icon: "error",
+          title: "Duplicate User!",
+          text: "Provided Email-ID Already Exists :(",
+        })
+        console.error("User with the provided EmailID already exists.");
+        // Handle the case where a user with the provided unique value already exists
+      } else {
+        // Proceed with user registration if the unique value is not found
+        // print(dob)
+        firebase.auth().createUserWithEmailAndPassword(email, phone)
+          .then((userCredential) => {
+            // Signed in
+            var user = userCredential.user;
+            console.log("User registered:", user);
+
+            // Add user details to the Realtime Database
+            firebase.database().ref('users/' + user.uid).set({
+                sname : sname,
+                fname : fname,
+                mname : mname,
+                lname : lname,
+                phone : phone,
+                email : email,
+                address : address,
+              // You can add more user details here if needed
+            })
+            .then(() => {
+              swal({
+                title: "Registration Successfull!",
+                text: "User Successfully registered to the portal :)",
+                icon: "success",
+              })
+              console.log("User added to database");
+              // You can perform further actions after adding user to the database
+            })
+            .catch((error) => {
+              console.error("Error adding user to database:", error);
+              // Handle error while adding user to the database
+            });
+
+          })
+          .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error("Registration error:", errorMessage);
+            // Handle registration errors here
+          });
+      }
+    })
+    .catch((error) => {
+      console.error("Error checking for duplicate users:", error);
+      // Handle error while checking for duplicate users
+    });
+}
+
+const getElementVal = (id) => {
+    var val=document.getElementById(id).value;
+    if(val=="" || val==null || val=='' || val==" " || val==' ')
+    val="";
+  return val;
+};
+
+
+    </script>
+
+</body>
+
+</html>

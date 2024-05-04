@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IAPTCPR | Login</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!--Icon on title bar-->
+    <link rel='Shortcut Icon' type='image/x-icon' href='assets/images/logo.png'>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <link href="assets/css/variables-green.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'MyFont1';
+            src: url('assets/vendor/13-roshi-font/13Roshi-vmJeE.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont2';
+            src: url('assets/vendor/a-note-font/ANote-rgeO9.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont3';
+            src: url('assets/vendor/AAbsoluteEmpire-EaXpg/AAbsoluteEmpire-EaXpg.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont4';
+            src: url('assets/vendor/austhatic-script-font/AusthaticScript-3z1lM.ttf') format('truetype');
+        }
+        
+        .custom-swal-container {
+            background-color: rgba(0, 128, 0, 0.23) !important;
+        }
+        
+        .swal2-popup {
+            border-radius: 50px !important;
+            border: 5px solid rgba(55, 0, 255, 0.355) !important;
+        }
+        
+        .swal2-confirm {
+            background-color: rgba(0, 128, 0, 0.611) !important;
+            color: white;
+            border-radius: 50px !important;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
+            border-radius: 10px;
+        }
+        
+        .progress-container {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 5px;
+            border-radius: 50px;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: #21ea6d;
+            width: 0%;
+            border-radius: 50px;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .center{
+    width:99vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top:50px;
+    padding-bottom: 50px;
+}
+
+.div1,.div2{    
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    background-image: url('assets/images/bg.jpg');
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.div1 h1,.div2 h1{
+    text-align: center;
+    padding: 20px 0;
+  
+}
+
+.div1 form,.div2 form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .error{
+	height:40px;
+    padding-top: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    color:#EB4747;
+    display:block;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input,button{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .1s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9;
+    transition: .1s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:not(:placeholder-shown) ~ label{
+    top: -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before{
+    width: 100%;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
+#buttonregister{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    /* margin: 20px 0; */
+}
+
+#buttonregister:hover{
+    border-color: #2691d9;
+    transition: .5s;
+}
+
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup_link a:hover{
+    text-decoration: underline;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header text-center" data-scrollto-offset="0">
+        <a href="indexMain.html#hero-animated" class="align-items-center scrollto me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/images/title.png" class="ml-5 mb-3" style="height:70%; width:70%;" alt="">
+        </a>
+        <div id="myHeader" class="container-fluid d-flex align-items-center justify-content-center" style="z-index: 1;">
+
+
+            <nav id="navbar" class="navbar">
+                <ul>
+
+                    <li><a class="nav-link scrollto" href="indexMain.html#hero-animated">Home</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#aboutsec">About Us</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#portfolio">Gallery</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#contact">Contact Us</a></li>
+                    <li><a class="nav-link scrollto" href="register.html">Register</a></li>
+                    <li><a class="nav-link scrollto active" href="login.html">Login</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle d-none"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+        <main id="main">
+            <div class="center">
+                <div class="div1">
+                    <h1><img src="assets/images/login.png" alt="Login Page" style="height: 30%; width: 30%;"></h1>
+                    <form id="loginForm" action="POST">
+                      <div class="txt_field">
+                        <input type="text" id="uname" class="uname" placeholder="" required>
+                        <span></span>
+                        <label>Email ID</label>
+                      </div>
+                      <div class="txt_field">
+                        <input type="password" id="password" class="password" placeholder="" required>
+                        <span></span>
+                        <label>Password</label>
+                      </div>
+                      <input type="submit"  id="buttonregister" value="Submit">
+                      <div class="signup_link">
+                        Not a member?&nbsp; <a href="register.html">Signup</a>
+                      </div>
+                    </form>
+                </div>
+
+        </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-info">
+                            <h3>IAPTCPR Web</h3>
+                            <p>
+                                International Association of Plant Tissue Culturist and Phyto Researchers.<br>
+                                <strong>Phone:</strong> <br>
+                                <strong>Email:</strong> noreply.iaptcpr@gmail.com<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 footer-links"></div>
+                    <div class="col-lg-4 col-md-4 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li>
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#hero-animated">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#aboutsec">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#portfolio">Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#team">Team</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#contact">Contact Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="register.html">Register</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i><a href="login.html">Login</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-legal text-center">
+            <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+                <div class="d-flex flex-column align-items-center align-items-lg-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>IAPTCPR@2024
+                        </span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <b data-toggle="tooltip" data-placement="top" style="color:#21ea6d;"><b>Vidhey</b></b>
+                    </div>
+                </div>
+
+                <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                    <a target="_blank" href="" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a target="_blank" href="" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a target="_blank" href="mailto:" class="google-plus"><i class="bi bi-envelope-fill"></i></a>
+                    <a target="_blank" href="tel:" class="linkedin"><i class="bi bi-phone-fill"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" style="border-radius: 50px;" class="scroll-top d-flex align-items-center justify-content-center"><b><i class="bi bi-arrow-up-short"></i></b></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/swal.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        var header = document.getElementById("myHeader");
+        var header1 = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+
+            if (window.innerWidth > 1279) {
+                header1.classList.remove("fixed-top");
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    header.style.backgroundColor = "#ffffff";
+                    header.style.borderBottomLeftRadius = "20px";
+                    header.style.borderBottomRightRadius = "20px";
+                    header.style.boxShadow = "0px 5px 0px 0px rgba(0, 0, 0, 0.03)";
+                } else {
+                    header.classList.remove("sticky");
+                    header.style.backgroundColor = "transparent";
+                    header.style.borderBottomLeftRadius = "0px";
+                    header.style.borderBottomRightRadius = "0px";
+                    header.style.boxShadow = "0px 0px 0px 0px";
+                }
+            } else {
+                header1.classList.add("fixed-top");
+            }
+
+        }
+
+    firebaseConfig = {                
+        apiKey: "AIzaSyBDzbX51rYeLTt8CRMRPvRFMOU_T6WvWOY",
+        authDomain: "iaptcpr.firebaseapp.com",
+        projectId: "iaptcpr",
+        databaseURL: "https://iaptcpr-default-rtdb.firebaseio.com/",
+        storageBucket: "iaptcpr.appspot.com",
+        messagingSenderId: "1037008636841",
+        appId: "1:1037008636841:web:a6eaf40af60421a9d3d2b8",
+        measurementId: "G-2R6PF8XQ4W"
+    };
+    firebase.initializeApp(firebaseConfig);
+    document.title = "IAPTCPR | Login";
+
+    const loginForm = document.getElementById('loginForm');
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username = loginForm.uname.value;
+    const password = loginForm.password.value;
+    signInUser(username, password);
+});
+
+
+// Function to sign in a user
+function signInUser(email, password) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        console.log("User signed in:", user);
+        localStorage.setItem('mail', user.email);
+        swal({
+            title: "Login Successfull!",
+            text: "Welcome To IAPTCPR Portal",
+            icon: "success"
+          }).then((result) => {
+            document.getElementById("loginForm").reset();
+            if(user.email === "admin@gmail.com"){
+              window.location.href = "adminlogin.html";
+            } else{
+                // window.location.href = "userlogin.html";
+                swal({
+              icon: "error",
+              title: "Home Page for Normal Users is not Designed yet !",
+              text: errorMessage,
+            }).then((result) => {
+              document.getElementById("loginForm").reset();
+            });
+            }
+          });
+        // You can perform further actions after the user has signed in successfully
+      }).catch((error) => {
+        var errorCode = error.code;
+        // console.log(errorCode)
+        if(errorCode === "auth/invalid-email"){
+          var errorMessage = error.message;
+        } else {
+          var errorMessage = "Please Check Your Credentials...";
+        }
+          swal({
+              icon: "error",
+              title: "Invalid UserName or Password!",
+              text: errorMessage,
+            }).then((result) => {
+              document.getElementById("loginForm").reset();
+            });
+        console.error("Sign-in error:", errorMessage);
+      });
+}
+
+    </script>
+
+</body>
+
+</html>

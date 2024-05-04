@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IAPTCPR | Admin</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!--Icon on title bar-->
+    <link rel='Shortcut Icon' type='image/x-icon' href='assets/images/logo.png'>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <link href="assets/css/variables-green.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'MyFont1';
+            src: url('assets/vendor/13-roshi-font/13Roshi-vmJeE.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont2';
+            src: url('assets/vendor/a-note-font/ANote-rgeO9.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont3';
+            src: url('assets/vendor/AAbsoluteEmpire-EaXpg/AAbsoluteEmpire-EaXpg.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont4';
+            src: url('assets/vendor/austhatic-script-font/AusthaticScript-3z1lM.ttf') format('truetype');
+        }
+        
+        .custom-swal-container {
+            background-color: rgba(0, 128, 0, 0.23) !important;
+        }
+        
+        .swal2-popup {
+            border-radius: 50px !important;
+            border: 5px solid rgba(55, 0, 255, 0.355) !important;
+        }
+        
+        .swal2-confirm {
+            background-color: rgba(0, 128, 0, 0.611) !important;
+            color: white;
+            border-radius: 50px !important;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
+            border-radius: 10px;
+        }
+        
+        .progress-container {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 5px;
+            border-radius: 50px;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: #21ea6d;
+            width: 0%;
+            border-radius: 50px;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .rwd-table {
+  margin: auto;
+  min-width: 300px;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+.rwd-table tr:first-child {
+  border-top: none;
+  background: #428bca;
+  color: #fff;
+}
+
+.rwd-table tr {
+  border-top: 1px solid #ddd;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f9fc;
+}
+
+.rwd-table tr:nth-child(odd):not(:first-child) {
+  background-color: #ebf3f9;
+}
+
+.rwd-table th {
+  display: none;
+  text-align: center;
+}
+
+.rwd-table td {
+  display: block;
+}
+
+.rwd-table td:first-child {
+  margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+  margin-bottom: .5em;
+}
+
+.rwd-table td:before {
+  content: attr(data-th) ": ";
+  font-weight: bold;
+  width: 120px;
+  display: inline-block;
+  color: #000;
+}
+
+.rwd-table th,
+.rwd-table td {
+  text-align: center;
+}
+
+.rwd-table {
+  color: #333;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.rwd-table tr {
+  border-color: #bfbfbf;
+}
+
+.rwd-table th,
+.rwd-table td {
+  padding: .5em 1em;
+}
+@media screen and (max-width: 601px) {
+  .rwd-table tr:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .rwd-table tr:hover:not(:first-child) {
+    background-color: #d8e7f3;
+  }
+  .rwd-table td:before {
+    display: none;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    display: table-cell;
+    padding: .25em .5em;
+  }
+  .rwd-table th:first-child,
+  .rwd-table td:first-child {
+    padding-left: 0;
+  }
+  .rwd-table th:last-child,
+  .rwd-table td:last-child {
+    padding-right: 0;
+  }
+  .rwd-table th,
+  .rwd-table td {
+    padding: 1em !important;
+  }
+}
+
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: rgb(241, 243, 245);
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 0.5em;
+  background: rgb(31, 156, 240);
+  /* border: 1px solid #e8e8e8; */
+  border: none;
+  /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; */
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  /* background-color: rgba(0, 0, 0, 0.05); */
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: rgb(31, 156, 240);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1.5px solid rgb(228, 234, 238);
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: rgb(31, 156, 240);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: rgb(31, 156, 240);
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+.head{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+  /* flex-direction: row; */
+}
+
+.td {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.head input, .head button {
+  color: black;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  padding-left: 15px;
+  padding-right: 80px;
+  background-color: transparent;
+}
+
+#cover {
+  width: 550px;
+  background-color: white;
+  border-radius: 20px;
+  transform: scale(0.5);
+}
+
+form {
+  height: 96px;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 96px;
+  font-size: 40px;
+  line-height: 1;
+}
+
+input:focus {
+  outline: none; /* Remove the default outline */
+}
+
+input[type="text"]::placeholder {
+  color: black;
+}
+
+#s-cover {
+  width: 1px;
+  padding-left: 35px;
+}
+
+.head button {
+  position: relative;
+  display: block;
+  width: 84px;
+  height: 96px;
+  cursor: pointer;
+}
+
+#s-circle {
+  position: relative;
+  top: -8px;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  margin-top: 0;
+  border-width: 15px;
+  border: 15px solid blue;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.5s ease all;
+}
+
+button span {
+  position: absolute;
+  top: 68px;
+  left: 43px;
+  display: block;
+  width: 45px;
+  height: 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  transform: rotateZ(52deg);
+  transition: 0.5s ease all;
+}
+
+button span:before,
+button span:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 12px;
+  width: 45px;
+  height: 15px;
+  background-color: blue;
+  border-radius: 10px;
+  transform: rotateZ(0);
+  transition: 0.5s ease all;
+}
+
+#s-cover:hover #s-circle {
+  top: -1px;
+  width: 67px;
+  height: 15px;
+  border-width: 0;
+  background-color: blue;
+  border-radius: 20px;
+}
+
+#s-cover:hover span {
+  top: 50%;
+  left: 56px;
+  width: 25px;
+  margin-top: -9px;
+  transform: rotateZ(0);
+}
+
+#s-cover:hover button span:before {
+  bottom: 11px;
+  transform: rotateZ(52deg);
+}
+
+#s-cover:hover button span:after {
+  bottom: -11px;
+  transform: rotateZ(-52deg);
+}
+#s-cover:hover button span:before,
+#s-cover:hover button span:after {
+  right: -6px;
+  width: 40px;
+  background-color: blue;
+}
+        
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header text-center" data-scrollto-offset="0">
+        <a href="#" class="align-items-center scrollto me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/images/title.png" class="ml-5 mb-3" style="height:70%; width:70%;" alt="">
+        </a>
+        <div id="myHeader" class="container-fluid" style="z-index: 1; text-align: right;">
+
+
+            <nav id="navbar" class="navbar" style="justify-content: flex-end;">
+                <ul>
+                    <li><a class="nav-link scrollto" href="#" onclick="logOut()">Logout</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle d-none"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+        <main id="main">
+            <div class="head">
+                <h1 id="quote">Registration Details</h1>
+                <div id="cover">
+                  <div class="td"><input id="search" type="text" placeholder="Search"></div>
+                  <div class="td" id="s-cover">
+                    <button onclick="searchTable()" type="submit">
+                      <div id="s-circle"></div>
+                      <span></span>
+                    </button>
+                  </div>
+              </div>
+            </div>
+            
+            <div class="container">
+                <table id="data-table" class="rwd-table">
+                  <tbody>
+                      <!-- Data will be dynamically populated here -->
+                  </tbody>
+                </table>
+            </div>
+
+        </main>
+        <br/><br/>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="footer-legal text-center">
+            <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+                <div class="d-flex flex-column align-items-center align-items-lg-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>IAPTCPR@2024
+                        </span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <b data-toggle="tooltip" data-placement="top" style="color:#21ea6d;"><b>Vidhey</b></b>
+                    </div>
+                </div>
+
+                <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                    <a target="_blank" href="" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a target="_blank" href="" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a target="_blank" href="mailto:" class="google-plus"><i class="bi bi-envelope-fill"></i></a>
+                    <a target="_blank" href="tel:" class="linkedin"><i class="bi bi-phone-fill"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" style="border-radius: 50px;" class="scroll-top d-flex align-items-center justify-content-center"><b><i class="bi bi-arrow-up-short"></i></b></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/js/swal.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        var header = document.getElementById("myHeader");
+        var header1 = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+
+            if (window.innerWidth > 1279) {
+                header1.classList.remove("fixed-top");
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    header.style.backgroundColor = "#ffffff";
+                    header.style.borderBottomLeftRadius = "20px";
+                    header.style.borderBottomRightRadius = "20px";
+                    header.style.boxShadow = "0px 5px 0px 0px rgba(0, 0, 0, 0.03)";
+                } else {
+                    header.classList.remove("sticky");
+                    header.style.backgroundColor = "transparent";
+                    header.style.borderBottomLeftRadius = "0px";
+                    header.style.borderBottomRightRadius = "0px";
+                    header.style.boxShadow = "0px 0px 0px 0px";
+                }
+            } else {
+                header1.classList.add("fixed-top");
+            }
+
+        }
+
+    firebaseConfig = {                
+        apiKey: "AIzaSyBDzbX51rYeLTt8CRMRPvRFMOU_T6WvWOY",
+        authDomain: "iaptcpr.firebaseapp.com",
+        projectId: "iaptcpr",
+        databaseURL: "https://iaptcpr-default-rtdb.firebaseio.com/",
+        storageBucket: "iaptcpr.appspot.com",
+        messagingSenderId: "1037008636841",
+        appId: "1:1037008636841:web:a6eaf40af60421a9d3d2b8",
+        measurementId: "G-2R6PF8XQ4W"
+    };
+    firebase.initializeApp(firebaseConfig);
+    document.title = "IAPTCPR | Admin";
+
+    
+
+    const database = firebase.database();
+const ref = database.ref('users');
+var searchString= "";
+
+ref.once('value', gotData1, errData);
+
+
+function logOut(){
+    swal({
+        title: "Logout ?",
+        text: "Are you sure want to logout ?",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      }).then((result) => {
+        if (result) {
+            swal("Logout Success!", {
+                icon: "success",
+                buttons:false,
+                timer: 1000
+              }).then(() => {
+                firebase.auth().signOut().then(() => {
+                    localStorage.setItem('mail', null);
+                    window.location.href = "indexMain.html";
+                  }).catch((error) => {
+                        console.error(error)
+                  });
+                
+              });
+        }
+      });
+}
+
+
+function searchTable(){
+    var inputField = document.getElementById("search");
+    searchString = inputField.value;
+    ref.once('value', gotData1, errData);
+}
+
+function gotData1(data) {
+    const tableBody = document.querySelector('#data-table tbody');
+    tableBody.innerHTML = `
+                            <tr>
+                            <th>Name</th>
+                            <th>Mail ID</th>
+                            <th>Phone No</th>
+                            <th>Address</th>
+                            </tr>
+                          `; // Clear previous data
+
+    const records = data.val();
+    if (records) {
+        Object.keys(records).forEach(key => {
+            const record = records[key];
+            if(record.fname!="Admin"){
+            if(searchString != ''){
+                const regex = new RegExp(searchString.toLowerCase());
+                if(regex.test(`${record.roll_no}`) || regex.test(`${record.name}`.toLocaleLowerCase())){
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td style="text-align: left">${record.sname}. ${record.fname}. ${record.mname} ${record.lname}</td>
+                        <td style="text-align: left">${record.email}</td>
+                        <td>${record.phone}</td>
+                        <td>${record.address}</td>
+                    `;
+                    tableBody.appendChild(row);
+                }
+            }
+            else{
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                <td style="text-align: left">${record.sname}. ${record.fname}. ${record.mname} ${record.lname}</td>
+                <td style="text-align: left">${record.email}</td>
+                <td>${record.phone}</td>
+                <td>${record.address}</td>
+                `;
+                tableBody.appendChild(row);
+            }
+        }
+            
+        });
+    }
+}
+   
+function errData(err) {
+    console.error(err);
+}
+
+
+function viewRecord(key) {
+    window.open(key, '_blank');
+    console.log('Editing record with key:', key);
+}
+
+// Function to check if the user is authenticated
+function checkAuthentication() {
+    firebase.auth().onAuthStateChanged((user) => {
+        if (!user) {
+            window.location.href = "indexMain.html"
+        }else{
+            // console.log("Authentication");
+            if(user.email != "admin@gmail.com"){
+            //   window.location.href = "userlogin.html";
+            swal({
+              icon: "error",
+              title: "Home Page for Normal Users is not Designed yet !",
+              text: errorMessage,
+            }).then((result) => {
+                window.location.href = "indexMain.html";
+            });
+            }
+          }
+      });
+  }
+  
+// Call the checkAuthentication function when the page loads
+window.onload = function() {
+    checkAuthentication();
+};
+  
+
+    </script>
+
+</body>
+
+</html>

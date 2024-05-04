@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>IAPTCPR | Home</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!--Icon on title bar-->
+    <link rel='Shortcut Icon' type='image/x-icon' href='assets/images/logo.png'>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!--Sweet Alert-2-->
+    <script src="assets/vendor/swal2/swal.js"></script>
+    <script src="assets/vendor/swal2/swal1.js"></script>
+    <script src="assets/vendor/swal2/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="assets/vendor/swal2/sweetalert2.min.css">
+
+
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <link href="assets/css/variables-green.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!-- Firebase files -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+
+    <style type="text/css">
+        @font-face {
+            font-family: 'MyFont1';
+            src: url('assets/vendor/13-roshi-font/13Roshi-vmJeE.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont2';
+            src: url('assets/vendor/a-note-font/ANote-rgeO9.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont3';
+            src: url('assets/vendor/AAbsoluteEmpire-EaXpg/AAbsoluteEmpire-EaXpg.ttf') format('truetype');
+        }
+        
+        @font-face {
+            font-family: 'MyFont4';
+            src: url('assets/vendor/austhatic-script-font/AusthaticScript-3z1lM.ttf') format('truetype');
+        }
+        
+        .custom-swal-container {
+            background-color: rgba(0, 128, 0, 0.23) !important;
+        }
+        
+        .swal2-popup {
+            border-radius: 50px !important;
+            border: 5px solid rgba(55, 0, 255, 0.355) !important;
+        }
+        
+        .swal2-confirm {
+            background-color: rgba(0, 128, 0, 0.611) !important;
+            color: white;
+            border-radius: 50px !important;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+         ::-webkit-scrollbar-track {
+            background: radial-gradient(328px at 2.9% 15%, rgb(191, 224, 251) 0%, rgb(232, 233, 251) 25.8%, rgb(252, 239, 250) 50.8%, rgb(234, 251, 251) 77.6%, rgb(240, 251, 244) 100.7%);
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background: linear-gradient(179.1deg, rgb(43, 170, 96) 2.3%, rgb(129, 204, 104) 98.3%);
+            border-radius: 10px;
+        }
+        
+        .progress-container {
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+            height: 5px;
+            border-radius: 50px;
+        }
+        
+        .progress-bar {
+            height: 5px;
+            background: #21ea6d;
+            width: 0%;
+            border-radius: 50px;
+        }
+        
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+    </style>
+
+    <!-- EmailJs File -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Rz1Pi-IFQosgI08we");
+        })();
+    </script>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header text-center" data-scrollto-offset="0">
+        <a href="indexMain.html#hero-animated" class="align-items-center scrollto me-auto me-lg-0">
+            <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/images/title.png" class="ml-5 mb-3" style="height:70%; width:70%;" alt="">
+        </a>
+        <div id="myHeader" class="container-fluid d-flex align-items-center justify-content-center" style="z-index: 1;">
+
+
+            <nav id="navbar" class="navbar">
+                <ul>
+
+                    <li><a class="nav-link scrollto" href="indexMain.html#hero-animated">Home</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#aboutsec">About Us</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#portfolio">Gallery</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#team">Team</a></li>
+                    <li><a class="nav-link scrollto" href="indexMain.html#contact">Contact Us</a></li>
+                    <li><a class="nav-link scrollto" href="register.html">Register</a></li>
+                    <li><a class="nav-link scrollto" href="login.html">Login</a></li>
+
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle d-none"></i>
+            </nav>
+            <!-- .navbar -->
+
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <section id="home" style="padding-top: 0px !important;">
+        <!-- <a href="assets/docs/conference.pdf" target="_blank">
+            <marquee style="position: absolute; margin-top: -50px; background-color: rgba(213, 239, 239, 0.326); color: rgb(23, 201, 23); font-size: 30px; z-index: 1; opacity: 0.7; font-family: 'MyFont3', sans-serif;">
+
+                International Conference on 
+
+            </marquee>
+        </a> -->
+        <section id="hero-animated" class="hero-animated d-flex align-items-center">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+                <br/><img src="assets/images/main.gif" alt="Main Image" style="border-radius: 20px; height: 50%; width:50%;"/>
+                <h2><span style="font-weight: bolder;"> Welcome to IAPTCPR Web </span></h2>
+                <p>Research on plants enriches our intellectual life and adds to our knowledge about other life processes.<br/> also can teach us how to approach problems in agriculture, health, and the environment.</p>
+                <div class="d-flex">
+                    <a href="register.html" class="btn-get-started scrollto">Get Started</a>
+                    <a href="https://www.youtube.com/watch?v=" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                </div>
+            </div>
+        </section>
+
+        <main id="main">
+
+            <!-- ======= About ======= -->
+            <section id="featured-services " class="featured-services about">
+                <div class="container-fluid col-10">
+
+                    <div id="aboutsec" class="row g-4 g-lg-5 mt-5" data-aos="fade-up" data-aos-delay="200">
+                        <div class="section-header">
+                            <h2>About Us</h2>
+                            <p>Connecting Dreams, Creating Realities: Empowering Your Journey with International Association of Plant Tissue Culturist and Phyto Researchers.</p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="about-img">
+                                <img id="gify" src="assets/img/about/1.jpg" class="img-fluid mt-3 mb-5 rounded-4" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <!--<img class="pt-0 pt-lg-5 img-fluid" src="assets/img/logo4.png" class="ml-5" style="" alt="">-->
+
+                            <!-- Tabs -->
+                            <ul class="nav nav-pills mb-3">
+                                <li><a onclick="document.getElementById('gify').src='assets/img/about/1.jpg'" class="nav-link active" data-bs-toggle="pill" href="#tab1">Background</a></li>
+                                <li><a onclick="document.getElementById('gify').src='assets/img/about/2.jpg'" class="nav-link" data-bs-toggle="pill" href="#tab2">Objectives</a></li>
+                            </ul>
+                            <!-- End Tabs -->
+
+                            <!-- Tab Content -->
+                            <div class="tab-content">
+
+                                <div class="tab-pane fade show active" id="tab1">
+                                    <h2>Background of IAPTCPR</h2>
+
+                                    Research on plants enriches our intellectual life and adds to our knowledge about other life processes. The results of research on plant systems also can teach us how to approach problems in agriculture, health, and the environment.
+                                    Plant Research appears to have had originated as far back as the Stone Age. Early man's interest may have been simply to learn what different herbs and plants could be used as food. This could be seen as an early and basic form of plant classification, grouping them as edible and inedible.
+                                    <br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plant tissue culture plays an important role in the field of fundamental research, conservation, and production. Studying plant morphogenesis and plant physiology requires the ability to grow plants in vitro and plant tissue culture techniques provide the best way to accomplish this.
+                                    Plant tissue culture is applied in the area of plant physiological and biochemical research to study the cell cycle, metabolism in cells, nutritional, morphogenetical and developmental studies in plants.
+                                    <br/><br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plants provide food and oxygen for the entire biosphere, literally supporting the existence of life on Earth. They also provide shelter, fiber, fuel, and medicinal compounds that profoundly affect mankind.
+                                    Finding new ways to produce enough nutritious food for a growing world population. Breeding plants to tolerate the heat- and drought-stress caused by climate change. Developing sustainable cropping practices to produce healthful food while protecting the environment. Investigating new methods to fight plant diseases.
+
+                                </div>
+                                <!-- End Tab 1 Content -->
+
+                                <div class="tab-pane fade show" id="tab2">
+
+                                    <h2>Objectives of IAPTCPR</h2><br/>
+                                   <ul style="list-style-type:'&#10503 &nbsp';">
+                                             <li>Exchange and sharing of information and coordination between plant research and tissue culture workers by holding meetings, conferences, publication of scientific newsletters.</li>
+                                        <br/><li>To identify Plant research problems of practical application and to collaborate with specialists in other countries and to represent the work done in India and abroad.</li>
+                                        <br/><li>Promotion of basic and applied problems of Plant and Tissue Culture and to make recommendations to the government and private authorities concerned to strengthen research in areas of major importance.</li>
+                                        <br/><li>Organizing Guest Lectures, Plantation and Environmental Awareness programmes by conducting camps and to increase Biodiversity conservation activities.</li>
+                                                                       
+                                   </ul>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- End About Section -->
+    </section>
+
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="portfolio" class="portfolio" data-aos="fade-up">
+
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Photo Gallery</h2>
+                <p>Elevating Ideas, Crafting Experiences: Explore our portfolio and witness the transformative power of our work.</p>
+            </div>
+
+        </div>
+
+        <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+                <ul class="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">Crops</li>
+                    <li data-filter=".filter-product">Events</li>
+                    <li data-filter=".filter-branding">Location</li>
+                    <li data-filter=".filter-books">Books</li>
+                </ul>
+                <!-- End Portfolio Filters -->
+
+                <div class="row g-0 portfolio-container">
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/c1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Crop Image 1</h4>
+                            <a href="assets/img/portfolio/c1.jpg" title="Crop Image 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 1</h4>
+                            <a href="assets/img/portfolio/e1.jpg" title="Event Image 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
+                        <img src="assets/img/portfolio/l1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Location 1</h4>
+                            <a href="assets/img/portfolio/l1.jpg" title="Location 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
+                        <img src="assets/img/portfolio/b1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Book 1</h4>
+                            <a href="assets/img/portfolio/b1.jpg" title="Book 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/c2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Crop Image 2</h4>
+                            <a href="assets/img/portfolio/c2.jpg" title="Crop Image 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 2</h4>
+                            <a href="assets/img/portfolio/e2.jpg" title="Event Image 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
+                        <img src="assets/img/portfolio/l2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Location 2</h4>
+                            <a href="assets/img/portfolio/l2.jpg" title="Location 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
+                        <img src="assets/img/portfolio/b2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Book 2</h4>
+                            <a href="assets/img/portfolio/b2.jpg" title="Book 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/c3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Crop Image 3</h4>
+                            <a href="assets/img/portfolio/c3.jpg" title="Crop Image 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/c4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Crop Image 4</h4>
+                            <a href="assets/img/portfolio/c4.jpg" title="Crop Image 4" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
+                        <img src="assets/img/portfolio/b3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Book 3</h4>
+                            <a href="assets/img/portfolio/b3.jpg" title="Book 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 3</h4>
+                            <a href="assets/img/portfolio/e3.jpg" title="Event Image 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e4.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 4</h4>
+                            <a href="assets/img/portfolio/e4.jpg" title="Event Image 4" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 5</h4>
+                            <a href="assets/img/portfolio/e5.jpg" title="Event Image 5" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 6</h4>
+                            <a href="assets/img/portfolio/e6.jpg" title="Event Image 6" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e7.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 7</h4>
+                            <a href="assets/img/portfolio/e7.jpg" title="Event Image 7" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e8.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 8</h4>
+                            <a href="assets/img/portfolio/e8.jpg" title="Event Image 8" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
+                        <img src="assets/img/portfolio/l3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Location 3</h4>
+                            <a href="assets/img/portfolio/l3.jpg" title="Location 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
+                        <img src="assets/img/portfolio/e9.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Event Image 9</h4>
+                            <a href="assets/img/portfolio/e9.jpg" title="Event Image 9" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/c5.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Crop Image 5</h4>
+                            <a href="assets/img/portfolio/c5.jpg" title="Crop Image 5" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
+                        <img src="assets/img/portfolio/c6.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4>Crop Image 6</h4>
+                            <a href="assets/img/portfolio/c6.jpg" title="Crop Image 6" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                        </div>
+                    </div>
+                    <!-- End Portfolio Item -->
+
+
+
+                </div>
+                <!-- End Portfolio Container -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Gallery Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team">
+        <section id="" class="team">
+            <div class="container-fluid" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Our Team</h2>
+                    <p>Our team excels through collaboration, innovation, and unwavering determination. Join us and be part of our success story.</p>
+                </div>
+
+                <div class="row gy-5">
+
+                    <div class="col-xl-1 col-md-1 d-flex" data-aos="zoom-in" data-aos-delay="400">
+                    </div>
+                    <!-- End Team Member -->
+
+                    <div class="col-xl-2 col-md-3 d-flex" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info" style="padding-bottom: 15px !important; padding-top: 15px !important;">
+                                <div class="social">
+                                    <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                    <a target="_blank" href="tel:"><i class="bi bi-phone-fill"></i></a>
+                                    <a target="_blank" href="mailto:"><i class="bi bi-envelope-fill"></i></a>
+                                    <a target="_blank" href="https://wa.me/"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                                <h4 class="pt-4">Dr.B.Pargavi</h4>
+                                <span class="pb-3">President, IAPTCPR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+
+                    <div class="col-xl-2 col-md-3 d-flex" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <div class="social">
+                                    <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                    <a target="_blank" href="tel:"><i class="bi bi-phone-fill"></i></a>
+                                    <a target="_blank" href="mailto:"><i class="bi bi-envelope-fill"></i></a>
+                                    <a target="_blank" href="https://wa.me/"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                                <h4>Dr.C. Ravider Singh</h4>
+                                <span>Vice-president, IAPTCPR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+
+                    <div class="col-xl-2 col-md-3 d-flex" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <div class="social">
+                                    <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                    <a target="_blank" href="tel:"><i class="bi bi-phone-fill"></i></a>
+                                    <a target="_blank" href="mailto:"><i class="bi bi-envelope-fill"></i></a>
+                                    <a target="_blank" href="https://wa.me/"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                                <h4>Ch. Sudeer Kumar</h4>
+                                <span>General Secretary, IAPTCPR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+
+                    <div class="col-xl-2 col-md-3 d-flex" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <div class="social">
+                                    <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                    <a target="_blank" href="tel:"><i class="bi bi-phone-fill"></i></a>
+                                    <a target="_blank" href="mailto:"><i class="bi bi-envelope-fill"></i></a>
+                                    <a target="_blank" href="https://wa.me/"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                                <h4>R. Muralikrishna</h4>
+                                <span>Joint Secretary, IAPTCPR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+
+                    <div class="col-xl-2 col-md-3 d-flex" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="team-member">
+                            <div class="member-img">
+                                <img src="assets/img/team/team-5.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="member-info">
+                                <div class="social">
+                                    <a target="_blank" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                                    <a target="_blank" href="tel:"><i class="bi bi-phone-fill"></i></a>
+                                    <a target="_blank" href="mailto:"><i class="bi bi-envelope-fill"></i></a>
+                                    <a target="_blank" href="https://wa.me/"><i class="bi bi-whatsapp"></i></a>
+                                </div>
+                                <h5>Dr. S. Siva subramanian</h5>
+                                <span>Treasurer, IAPTCPR</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Team Member -->
+
+                    <div class="col-xl-1 col-md-1 d-flex" data-aos="zoom-in" data-aos-delay="400">
+                    </div>
+                    <!-- End Team Member -->
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Team Section -->
+        <!-- ======= Team Section ======= -->
+        <section id="" class="testimonials">
+            <div class="container" data-aos="fade-up">
+
+                <div class="testimonials-slider swiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/team/t1.jpg" class="testimonial-img" alt="">
+                                <h3>Dr.B.Pargavi</h3>
+                                <h4>President, IAPTCPR</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i> From soil to sky, united in growth - IAPTCPR embraces the global garden of discovery.
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End team item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/team/t2.jpg" class="testimonial-img" alt="">
+                                <h3>Dr.C. Ravider Singh</h3>
+                                <h4>Vice-president, IAPTCPR</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i> Seeding progress, cultivating connections - IAPTCPR plants the roots of collaboration.
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End team item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/team/t3.jpg" class="testimonial-img" alt="">
+                                <h3>Ch. Sudeer Kumar</h3>
+                                <h4>General Secretary, IAPTCPR</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i> Nurturing innovation, one leaf at a time - IAPTCPR leads the way in plant research.
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End team item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/team/t4.jpg" class="testimonial-img" alt="">
+                                <h3>R. Muralikrishna</h3>
+                                <h4>Joint Secretary, IAPTCPR</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i> Growing together, blooming worldwide - IAPTCPR fosters global botanical bonds.
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End team item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="assets/img/team/t5.jpg" class="testimonial-img" alt="">
+                                <h3>Dr. S. Siva subramanian</h3>
+                                <h4>Treasurer, IAPTCPR</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i> Planting ideas, harvesting solutions - IAPTCPR cultivates collaboration.
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- End team item -->
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+    <!-- End team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>If you need assistance or have any queries, please don't hesitate to contact us using the email or phone number provided on our website.</p>
+            </div>
+
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7631.792880547405!2d82.24024055!3d16.979643550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a382841a69f0539%3A0xc5fb20eff8d4e0bb!2sJawaharlal%20Nehru%20Technological%20University%2C%20Kakinada%2C%20Andhra%20Pradesh%20533003!5e0!3m2!1sen!2sin!4v1714824329288!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- End Google Maps -->
+
+        <div class="container">
+
+            <div class="row gy-5 gx-lg-5">
+
+                <div class="col-lg-4">
+
+                    <div class="info">
+                        <h3>Get in touch</h3>
+                        <p>If you have any questions or concerns, please don't hesitate to get in touch with us.</p>
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-envelope-fill flex-shrink-0"></i>
+                            <div>
+                                <h4>Email:</h4>
+                                <p> noreply.iaptcpr@gmail.com</p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-telephone-fill flex-shrink-0"></i>
+                            <div>
+                                <h4>Telephone:</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-telegram flex-shrink-0"></i>
+                            <div>
+                                <h4>Telegram:</h4>
+                                <p>TABSEARCH</p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+
+
+                        <div class="info-item d-flex">
+                            <i class="bi bi-printer-fill flex-shrink-0"></i>
+                            <div>
+                                <h4>Fax:</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <!-- End Info Item -->
+
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-8">
+                    <form class="php-email-form" style="background-color: transparent;">
+                        <div class="row mt-1">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="text" class="form-control" name="phoneno" id="phoneno" placeholder="Your Phone No" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" rows="40" name="message" placeholder="Message" id="message" required></textarea>
+                        </div>
+                        <div class="text-center"><input style="height: 200%; font-weight: bolder; background-color: rgba(0, 128, 0, 0.611) !important;" type="button" value="Submit" class="form-control text-light mt-3" onclick="sendMsg()"></div>
+                    </form>
+                </div>
+                <!-- End Contact Form -->
+
+            </div>
+
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer-info">
+                            <h3>IAPTCPR Web</h3>
+                            <p>
+                                International Association of Plant Tissue Culturist and Phyto Researchers.<br>
+                                <strong>Phone:</strong> <br>
+                                <strong>Email:</strong> noreply.iaptcpr@gmail.com<br>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 footer-links"></div>
+                    <div class="col-lg-4 col-md-4 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li>
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#hero-animated">Home</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#aboutsec">About Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#portfolio">Gallery</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#team">Team</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i> <a href="indexMain.html#contact">Contact Us</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i> <a href="register.html">Register</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <i class="bi bi-chevron-right"></i><a href="login.html">Login</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-legal text-center">
+            <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
+
+                <div class="d-flex flex-column align-items-center align-items-lg-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>IAPTCPR@2024
+                        </span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <b data-toggle="tooltip" data-placement="top" style="color:#21ea6d;"><b>Vidhey</b></b>
+                    </div>
+                </div>
+
+                <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                    <a target="_blank" href="" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a target="_blank" href="" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/" class="youtube"><i class="bi bi-youtube"></i></a>
+                    <a target="_blank" href="mailto:" class="google-plus"><i class="bi bi-envelope-fill"></i></a>
+                    <a target="_blank" href="tel:" class="linkedin"><i class="bi bi-phone-fill"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" style="border-radius: 50px;" class="scroll-top d-flex align-items-center justify-content-center"><b><i class="bi bi-arrow-up-short"></i></b></a>
+
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        var name1, mail, phoneno, sub, msg, text;
+        var header = document.getElementById("myHeader");
+        var header1 = document.getElementById("header");
+        var sticky = header.offsetTop;
+
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+
+            if (window.innerWidth > 1279) {
+                header1.classList.remove("fixed-top");
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                    header.style.backgroundColor = "#ffffff";
+                    header.style.borderBottomLeftRadius = "20px";
+                    header.style.borderBottomRightRadius = "20px";
+                    header.style.boxShadow = "0px 5px 0px 0px rgba(0, 0, 0, 0.03)";
+                } else {
+                    header.classList.remove("sticky");
+                    header.style.backgroundColor = "transparent";
+                    header.style.borderBottomLeftRadius = "0px";
+                    header.style.borderBottomRightRadius = "0px";
+                    header.style.boxShadow = "0px 0px 0px 0px";
+                }
+            } else {
+                header1.classList.add("fixed-top");
+            }
+
+        }
+
+        function sendMsg() {
+
+            name1 = document.getElementById("name").value;
+            mail = document.getElementById("email").value;
+            phoneno = document.getElementById("phoneno").value;
+            sub = document.getElementById("subject").value;
+            msg = document.getElementById("message").value;
+            text = "*RESPONSE FROM IAPTCPR WEBSITE*%0a%0a*NAME        :* " + name1 + "%0a*EMAIL        :* " + mail + "%0a*Phone No  :* " + phoneno + "%0a*SUBJECT    :* " + sub + "%0a*MESSAGE  :* %0a" + msg;
+
+            var link = "https://api.whatsapp.com/send/?phone=+917396104404&text=" + text + "&app_absent=0";
+            window.open(link);
+            sendMail();
+
+        }
+
+        function sendMail() {
+            name1 = document.getElementById("name").value;
+            mail = document.getElementById("email").value;
+            phoneno = document.getElementById("phoneno").value;
+            sub = document.getElementById("subject").value;
+            msg = document.getElementById("message").value;
+            var params = {
+                name: name1,
+                email: mail,
+                message: msg,
+                subject: sub,
+                phone: phoneno,
+                reply_to: mail,
+                send: "noreply.iaptcpr@gmail.com",
+            };
+
+            const serviceID = "service_suou7zm";
+            const templateID = "template_iaiyjmu";
+
+            emailjs.send(serviceID, templateID, params)
+                .then(res => {
+                    document.getElementById("name").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("phoneno").value = "";
+                    document.getElementById("subject").value = "";
+                    document.getElementById("message").value = "";
+                })
+                .catch(err => console.log(err));
+
+        }
+    </script>
+
+</body>
+
+</html>
